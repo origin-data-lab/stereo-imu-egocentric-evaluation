@@ -36,7 +36,7 @@ The evaluated 6-axis IMU stream averaged approximately **501.7 Hz**. No duplicat
 
 ## 03 · Camera–IMU temporal alignment
 
-Image motion and gyroscope signals were compared to **estimate**, not certify, camera–IMU offsets. The best-fit values were **−1.1 ms (left)** and **−1.2 ms (right)**, with fitting scores of **R² = 0.973 / 0.974**. The 30-second window estimates varied by up to 0.8 ms. A manufacturer result from another sensor mode differs; that discrepancy remains unresolved.
+Image motion and gyroscope signals were compared to **estimate**, not certify, camera–IMU offsets. The best-fit values were **−1.1 ms (left)** and **−1.2 ms (right)**, with fitting scores of **R² = 0.973 / 0.974**. The 30-second window estimates varied by up to 0.8 ms. A later check against a Kalibr reference showed this target-free method cannot resolve the offset to the millisecond, so these values indicate alignment within a few milliseconds only.
 
 ![Visual rotation versus gyro signals](figures/visual-rotation-vs-gyro.webp)
 *Figure 5 — Image-derived rotation compared with gyroscope motion.*
@@ -44,9 +44,9 @@ Image motion and gyroscope signals were compared to **estimate**, not certify, c
 ![Camera-IMU time offset across windows](figures/camera-imu-offset-windows.webp)
 *Figure 6 — Estimated offsets across analysis windows; not production synchronization constants.*
 
-## 04 · Stereo calibration limitations
+## 04 · Stereo calibration
 
-The supplied calibration file appears to refer to a **1920 × 1080** imaging mode, whereas this recording was captured at **1600 × 1200**. Applying it directly yielded position-dependent vertical rectification residuals. A diagnostic 3-DOF adjustment reduced median holdout vertical residual to **0.570 px** but changed horizontal disparity, so it **must not** be treated as validated production rectification.
+The calibration file originally supplied with the sample refers to a **1920 × 1080** imaging mode, whereas this recording was captured at **1600 × 1200**. Applied directly, it yielded position-dependent vertical rectification residuals (figures below). **Update, 23 October 2026:** a Kalibr calibration produced in the matching 1600 × 1200 mode was validated on this recording without adjustment, with a median angular epipolar error of **0.41 px** — see [Technical Field Note #04](https://origindatalab.io/technical-field-notes/stereo-calibration-check.html) and [stereo-calibration-validation](https://github.com/origin-data-lab/stereo-calibration-validation).
 
 ![Rectification residual map](figures/rectification-residual-map.webp)
 *Figure 7 — Spatially structured vertical residuals under supplied calibration parameters.*

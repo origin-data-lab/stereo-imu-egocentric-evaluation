@@ -38,7 +38,9 @@ The evaluation compared image-derived head motion with gyroscope data:
 | Fit R² | 0.973 | 0.974 |
 | 30-second window range | −1.5 to −0.7 ms | −1.5 to −0.8 ms |
 
-The per-axis R² values reported in the comparison figure are **0.971 / 0.972 / 0.979**. A manufacturer calibration from a **different sensor mode** reported **+0.89 / +0.95 ms**; this discrepancy remains unresolved. These values must **not** be treated as final camera–IMU synchronization constants.
+The per-axis R² values reported in the comparison figure are **0.971 / 0.972 / 0.979**. These values must **not** be treated as final camera–IMU synchronization constants.
+
+> **Update, 23 October 2026.** Applied to a recording with a Kalibr camera–IMU reference, the same method missed the reference time shift by several milliseconds and its fit quality was nearly flat over a several-millisecond window. The estimate above supports alignment within a few milliseconds only.
 
 ## 5. Stereo calibration limitation
 
@@ -46,8 +48,10 @@ A supplied calibration file reported stereo RMS **0.362 px**, but its principal 
 
 A diagnostic three-degree-of-freedom rotation adjustment reduced the holdout median vertical residual to **0.570 px**, but involved approximately **−1.41°** of yaw and shifted right-image points horizontally by approximately **−20.9 px**. This diagnostic adjustment is **not** an approved production rectification or calibration.
 
+> **Update, 23 October 2026.** A Kalibr calibration produced in the matching 1600 × 1200 mode was later validated on this recording without adjustment (median angular epipolar error **0.41 px**). See [Technical Field Note #04](https://origindatalab.io/technical-field-notes/stereo-calibration-check.html).
+
 ## 6. Conclusions and boundaries
 
-Frame-level correspondence, recorded timestamp consistency and IMU continuity were supported for this capture. Microsecond exposure timing remains device-reported, camera–IMU timing is estimated, and mode-matched stereo calibration and extrinsic validation remain open.
+Frame-level correspondence, recorded timestamp consistency and IMU continuity were supported for this capture. Microsecond exposure timing remains device-reported, camera–IMU timing is estimated, mode-matched stereo calibration has since been validated (Field Note #04), and independent camera–IMU extrinsic and timing verification remains open.
 
 This report makes no claim of independent microsecond-level synchronization validation, production calibration acceptance, cross-mode reproducibility, or improvement in robot-learning outcomes.

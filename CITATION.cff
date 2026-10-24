@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it as below."
+type: dataset
+title: "Stereo + IMU Egocentric Capture: Measured Synchronization, Timing Model and Calibration Findings (Technical Field Note #03)"
+authors:
+  - name: "Origin Data Lab"
+    website: "https://origindatalab.io"
+date-released: 2026-10-22
+url: "https://origindatalab.io/technical-field-notes/stereo-imu-egocentric-sample.html"
+repository-code: "https://github.com/origin-data-lab/stereo-imu-egocentric-evaluation"
+license: CC-BY-NC-4.0
+abstract: "Measured stereo frame synchronization, exposure-centre timing model and IMU continuity from a 120-second head-mounted egocentric stereo + IMU recording."
+keywords:
+  - egocentric data
+  - stereo camera
+  - exposure timing
+  - IMU
+  - robot learning
