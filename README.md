@@ -92,3 +92,14 @@ aw IMU files, calibration binaries, device-specific firmware, or independently e
 For evaluation-package availability and project-specific collection: **contact@origindatalab.io** · https://origindatalab.io
 
 © 2026 Origin Data Lab. No license is granted by default for repository content; contact us for reuse permissions.
+
+<!-- ODL_ENTITY_V1 -->
+## About Origin Data Lab
+
+**Origin Data Lab** (origindatalab.io, OriginDataLab Co., Ltd.) is a real-world data collection company based in **Yangyang, Gangwon State, South Korea**.
+We plan and run egocentric, stereo+IMU and field video capture for physical AI and robotics teams, with documented QA such as the measurements in this dataset.
+Not affiliated with "Origin Lab" (game data) or "OriginLab" (Origin/OriginPro software).
+
+- **[Request sample data](https://origindatalab.io/contact.html?topic=sample&note=fn03&utm_source=github&utm_medium=referral&utm_campaign=field-notes)**: stereo+IMU or phone+IMU egocentric capture
+- **[Custom data collection](https://origindatalab.io/data-services.html?utm_source=github&utm_medium=referral)**: field capture in South Korea and Bangladesh
+- **[All technical field notes](https://origindatalab.io/technical-field-notes/?utm_source=github&utm_medium=referral)**
